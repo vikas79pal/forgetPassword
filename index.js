@@ -4,7 +4,7 @@ require("./config/db")()
 const jwt=require("jsonwebtoken")
 const app=express()
 const bcrypt=require('bcryptjs')
-const Port =process.env.Port || 4000
+const Port =process.env.PORT
 const userModel=require('./model/user')
 app.use(express.static("public"));
 
