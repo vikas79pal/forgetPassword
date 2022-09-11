@@ -1,6 +1,6 @@
 const express=require('express')
 const mongoose=require('mongoose')
-require("./config/db")()
+// require("./config/db")()
 const jwt=require("jsonwebtoken")
 const app=express()
 const bcrypt=require('bcryptjs')
@@ -8,6 +8,11 @@ const Port =process.env.PORT || 4000
 const userModel=require('./model/user')
 app.use(express.static("public"));
 
+// connection code
+const connection =mongoose.connect(process.env.DB_CONN)
+.then(console.log("db connected")).catch(err=>{
+    console.log("connection failed");
+})
 
 app.set("view engine", 'ejs')
 app.use(express.urlencoded({extended:true}))
