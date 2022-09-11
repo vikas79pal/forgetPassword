@@ -113,6 +113,7 @@ app.post("/log",async(req,res)=>{
         // check if user exist with that email id or not
 
         const user_exist = await userModel.findOne({email:email.toLowerCase()})
+        
         if (user_exist){
             // check whether the entered password matches with the reqistered one or not
             const isPassSame= await bcrypt.compare(password,user_exist.password)
