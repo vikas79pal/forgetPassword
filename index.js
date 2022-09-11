@@ -52,7 +52,7 @@ const MailFunc=(from,to,sub,text,html="")=>{
 
 app.get("/",(req,res)=>{
 
-    res.status(200).send("Hare Krishna!")
+    res.redirect("/log")
 
 })
 
