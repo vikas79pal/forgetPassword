@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Register</header>
+    <form action="/reg" method="post">
+        <div class="field fullname">
+            <div class="input-area">
+              <input name="fullname" type="text" placeholder="Enter full name">
+              <i class="icon fas fa-user"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-txt">Can't be blank</div>
+          </div>
+          <div class="field phone">
+            <div class="input-area">
+              <input name="phone" type="text" placeholder="Enter Mobile Number">
+              <i class="icon fas fa-phone"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-txt">Can't be blank</div>
+          </div>
+      <div class="field email">
+        <div class="input-area">
+          <input name="email" type="text" placeholder="Email Address">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input name="password" type="password" placeholder="Password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password can't be blank</div>
+      </div>
+      <!-- <div class="pass-txt"><a href="#">Forgot password?</a></div> -->
+      <input type="submit" value="Submit">
+    </form>
+    <div class="sign-txt">Already Signed up? <a href="/log">Login</a></div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+   
+        
